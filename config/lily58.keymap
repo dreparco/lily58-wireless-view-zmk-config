@@ -76,7 +76,7 @@
 &trans      &trans  &trans  &trans  &trans  &trans                          &trans  &trans    &kp PAGE_UP    &trans   &kp MINUS         &kp EQUAL
 &trans      &trans  &trans  &trans  &trans  &trans                          &trans  &kp HOME  &kp PAGE_DOWN  &kp END  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp LSHIFT  &trans  &trans  &trans  &trans  &trans  &kp F11      &kp F12    &trans  &trans    &trans         &trans   &trans            &CAD
-                            &tog 0  &tog 2  &tog 1  &kp SPACE    &kp ENTER  &tog 1  &tog 2    &tog 0
+                            &tog 0  &tog 2  &mo 1   &kp SPACE    &kp ENTER  &mo 1   &tog 2    &tog 0
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
