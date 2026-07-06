@@ -75,8 +75,8 @@
 &kp GRAVE   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                          &kp F6  &kp F7    &kp F8         &kp F9   &kp F10           &kp DELETE
 &trans      &trans  &trans  &trans  &trans  &trans                          &trans  &trans    &kp PAGE_UP    &trans   &kp MINUS         &kp EQUAL
 &trans      &trans  &trans  &trans  &trans  &trans                          &trans  &kp HOME  &kp PAGE_DOWN  &kp END  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp LSHIFT  &trans  &trans  &trans  &trans  &trans  &kp F11      &kp F12    &trans  &trans    &trans         &trans   &trans            &CAD
-                            &tog 0  &tog 2  &mo 1   &kp SPACE    &kp ENTER  &mo 1   &tog 2    &tog 0
+&kp LSHIFT  &trans  &trans  &trans  &trans  &trans  &kp F11      &kp F12    &trans  &trans    &trans         &trans   &trans            &trans
+                            &trans  &trans  &mo 1   &kp SPACE    &kp ENTER  &mo 1   &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -92,11 +92,11 @@
 
             display-name = "Raise";
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp NUMBER_6                                 &trans  &trans          &trans          &trans           &trans  &trans
-&kp TAB       &kp Q         &kp W         &kp E         &trans  &kp N7                                       &trans  &trans          &trans          &trans           &trans  &trans
-&kp LSHFT     &kp A         &kp S         &kp D         &trans  &kp N8                                       &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
-&kp LCTRL     &kp Z         &kp X         &kp C         &kp M   &trans        &kp DELETE      &trans         &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-                                          &trans        &tog 2  &kp SPACE     &kp LEFT_ALT    &kp RIGHT_ALT  &trans  &trans          &trans
+&kp ESC     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                    &kp NUMBER_6  &kp N7          &kp N8          &kp N9           &kp N0  &kp DELETE
+&kp TAB     &kp Q         &kp W         &kp E         &kp I         &kp NUMBER_6                              &trans        &trans          &kp UP_ARROW    &trans           &trans  &trans
+&kp LCTRL   &kp A         &kp S         &kp D         &kp J         &kp N7                                    &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&kp RSHIFT  &kp Z         &kp X         &kp C         &kp M         &kp N8        &kp N9       &trans         &trans        &trans          &trans          &trans           &trans  &trans
+                                        &trans        &tog 2        &kp N0        &kp SPACE    &kp RIGHT_ALT  &trans        &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
