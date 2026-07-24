@@ -14,6 +14,8 @@
             label = "BASE";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&tog 1>;
+
+            tapping-term-ms = <200>;
         };
 
         Raise: Raise {
@@ -21,6 +23,8 @@
             label = "RAISE";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&tog 2>;
+
+            tapping-term-ms = <200>;
         };
 
         space: space {
@@ -29,7 +33,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <1>;
+            tapping-term-ms = <0>;
         };
 
         enter: enter {
@@ -38,7 +42,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <1>;
+            tapping-term-ms = <0>;
         };
     };
 
@@ -89,11 +93,11 @@
 
             display-name = "Lower";
             bindings = <
-&trans     &trans  &trans  &trans        &trans  &trans                            &trans  &trans  &trans         &trans  &trans            &kp DELETE
-&trans     &trans  &trans  &trans        &trans  &trans                            &trans  &trans  &trans         &trans  &kp MINUS         &kp EQUAL
-&trans     &trans  &trans  &trans        &trans  &trans                            &trans  &trans  &trans         &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp LCTRL  &trans  &trans  &trans        &trans  &trans  &kp PG_DN    &kp PAGE_UP  &trans  &trans  &trans         &trans  &trans            &trans
-                           &kp LEFT_ALT  &mo 2   &mo 1   &kp SPACE    &kp ENTER    &mo 1   &mo 2   &kp RIGHT_ALT
+&trans     &trans  &trans  &trans        &trans    &trans                            &trans  &trans         &trans         &trans  &trans            &kp DELETE
+&trans     &trans  &trans  &trans        &trans    &trans                            &trans  &trans         &trans         &trans  &kp MINUS         &kp EQUAL
+&trans     &trans  &trans  &trans        &trans    &trans                            &trans  &trans         &trans         &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LCTRL  &trans  &trans  &trans        &trans    &trans  &kp PG_DN    &kp PAGE_UP  &trans  &trans         &trans         &trans  &trans            &trans
+                           &kp LEFT_ALT  &kp LGUI  &base   &kp SPACE    &kp ENTER    &Raise  &kp RIGHT_GUI  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -113,7 +117,7 @@
 &trans  &trans  &trans  &trans        &trans  &trans                          &trans  &trans  &trans          &trans          &trans           &trans
 &trans  &trans  &trans  &trans        &trans  &trans                          &trans  &trans  &trans          &kp UP_ARROW    &trans           &trans
 &trans  &trans  &trans  &trans        &trans  &trans  &trans       &trans     &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-                        &kp LEFT_GUI  &mo 2   &mo 1   &kp SPACE    &kp ENTER  &mo 1   &mo 2   &kp RGUI
+                        &kp LEFT_GUI  &trans  &base   &kp SPACE    &kp ENTER  &Raise  &trans  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
