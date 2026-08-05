@@ -65,8 +65,8 @@
             display-name = "Lower";
             bindings = <
 &kp F1     &kp F2  &kp F3  &kp F4        &kp F5      &kp F6                                                 &kp F7  &kp F8          &kp F9          &kp F10          &kp F11  &kp F12
-&kp TAB    &kp     &kp     &kp           &kp         &kp                                                    &kp     &kp             &kp UP_ARROW    &kp              &kp      &kp
-&kp LALT   &kp     &kp     &kp           &kp         &kp                                                    &kp     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp      &kp
+&kp TAB    &kp     &kp     &kp           &kp         &kp                                                    &kp     &kp             &kp UP_ARROW    &kp              &kp      &kp HOME
+&kp LALT   &kp     &kp     &kp           &kp         &kp                                                    &kp     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp      &kp END
 &kp LCTRL  &kp     &kp     &kp           &kp         &kp     &kp PG_DN               &kp PAGE_UP            &kp     &kp             &kp             &kp              &kp      &kp
                            &kp LEFT_GUI  &kp DELETE  &base   &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT ENTER  &base   &kp BSPC        &kp CAPS
             >;
