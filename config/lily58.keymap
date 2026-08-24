@@ -17,6 +17,15 @@
 
             tapping-term-ms = <200>;
         };
+
+        raise: raise {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RAISE";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&tog 2>;
+
+            tapping-term-ms = <200>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -34,11 +43,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC       &kp N1  &kp N2  &kp N3    &kp N4   &kp N5                                                 &kp N6  &kp N7         &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB       &kp Q   &kp W   &kp E     &kp R    &kp T                                                  &kp Y   &kp U          &kp I      &kp O    &kp P     &kp MINUS
-&kp LEFT_ALT  &kp A   &kp S   &kp D     &kp F    &kp G                                                  &kp H   &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL     &kp Z   &kp X   &kp C     &kp V    &kp B   &kp LBKT                &kp RBKT               &kp N   &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                              &kp LGUI  &kp DEL  &base   &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT ENTER  &base   &kp BACKSPACE  &tog 2
+&kp ESC       &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                 &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp GRAVE
+&kp TAB       &kp Q   &kp W   &kp E   &kp R   &kp T                                                  &kp Y   &kp U   &kp I      &kp O    &kp P     &kp MINUS
+&kp LEFT_ALT  &kp A   &kp S   &kp D   &kp F   &kp G                                                  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL     &kp Z   &kp X   &kp C   &kp V   &kp B   &kp DEL                 &kp BACKSPACE          &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                              &trans  &raise  &base   &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT ENTER  &base   &raise  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -54,11 +63,11 @@
 
             display-name = "Lower";
             bindings = <
-&kp F1     &kp F2    &kp F3         &kp F4        &kp F5      &kp F6                                                 &kp F7  &kp F8          &kp F9          &kp F10          &kp F11  &kp F12
-&kp TAB    &trans    &kp PAGE_UP    &trans        &trans      &trans                                                 &trans  &trans          &kp UP_ARROW    &trans           &trans   &trans
-&kp LALT   &kp HOME  &kp PAGE_DOWN  &kp END       &trans      &trans                                                 &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans
-&kp LCTRL  &trans    &trans         &trans        &trans      &trans  &trans                  &trans                 &trans  &trans          &trans          &trans           &trans   &trans
-                                    &kp LEFT_GUI  &kp DELETE  &base   &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT ENTER  &base   &kp BSPC        &kp CAPS
+&kp F1     &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                                                 &kp F7    &kp F8        &kp F9          &kp F10          &kp F11  &kp F12
+&kp TAB    &trans  &trans  &trans  &trans  &trans                                                 &trans    &trans        &trans          &trans           &trans   &trans
+&kp LALT   &trans  &trans  &trans  &trans  &trans                                                 &trans    &trans        &trans          &trans           &trans   &trans
+&kp LCTRL  &trans  &trans  &trans  &trans  &trans  &trans                  &trans                 &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans
+                           &trans  &trans  &trans  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT ENTER  &trans    &trans        &kp CAPS
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -74,11 +83,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans     &trans  &trans  &trans     &trans  &trans                          &trans  &trans  &trans     &trans  &trans          &trans
-&trans     &trans  &trans  &trans     &trans  &trans                          &trans  &trans  &trans     &trans  &trans          &to 0
-&trans     &trans  &trans  &trans     &trans  &trans                          &trans  &trans  &trans     &trans  &kp UP_ARROW    &to 2
-&kp LSHFT  &trans  &trans  &trans     &trans  &trans  &kp LEFT     &kp RIGHT  &trans  &trans  &trans     &trans  &kp DOWN_ARROW  &kp RSHFT
-                           &kp LCTRL  &trans  &trans  &kp SPACE    &kp ENTER  &trans  &trans  &kp RCTRL
+&trans          &trans  &trans  &trans        &trans  &trans                          &trans  &trans  &trans         &trans     &trans          &trans
+&trans          &trans  &trans  &trans        &trans  &trans                          &trans  &trans  &trans         &trans     &trans          &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans        &trans  &trans                          &trans  &trans  &trans         &trans     &kp UP_ARROW    &kp RIGHT_SHIFT
+&kp LCTRL       &trans  &trans  &trans        &trans  &trans  &trans       &trans     &trans  &trans  &kp LEFT       &kp RIGHT  &kp DOWN_ARROW  &kp RCTRL
+                                &kp LEFT_ALT  &trans  &trans  &kp SPACE    &kp ENTER  &trans  &trans  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
